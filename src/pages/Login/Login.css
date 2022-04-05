@@ -1,0 +1,16 @@
+.form-title {
+  color: #08a2b6;
+}
+.user-form {
+  max-width: 450px;
+  background-color: rgb(221, 229, 230);
+}
+.btn-submit {
+  background-color: #078fa1;
+}
+.fa-google {
+  color: #f74040;
+}
+.fab {
+  cursor: pointer;
+}
