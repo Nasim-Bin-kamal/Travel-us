@@ -14,6 +14,9 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Booking from './pages/Booking/Booking';
 import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
 import AddPackage from './pages/Dashboard/AddPackage/AddPackage';
+import DashboardHome from './pages/Dashboard/DashboardHome/DashboardHome';
+import ManageOrders from './pages/Dashboard/ManageOrders/ManageOrders';
+
 
 
 
@@ -43,10 +46,10 @@ function App() {
             <Route path="/dashboard/*" element={<PrivateRoute>
               <Dashboard />
             </PrivateRoute>}>
-              {/* <Route path="" element={<DashboardHome />} /> */}
+              <Route path="" element={<DashboardHome />} />
               {/* <Route path="manage-orders" element={<ManageOrders />} /> */}
               <Route path="add-package" element={<AddPackage />} />
-              {/* <Route path="manage-products" element={<ManageProducts />} /> */}
+              <Route path="manage-orders" element={<ManageOrders />} />
               <Route path="my-orders" element={<MyOrders />} />
               {/* <Route path="addReview" element={<AddReview />} /> */}
             </Route>

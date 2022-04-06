@@ -3,7 +3,7 @@ import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
 import useAuth from '../../hooks/useAuth';
 import styles from './Dashboard.module.css';
-import { FaHome, FaTh, FaComment, FaListUl, FaUserPlus, FaSignOutAlt, FaPlusCircle, FaServicestack } from "react-icons/fa";
+import { FaHome, FaComment, FaListUl, FaUserPlus, FaSignOutAlt, FaPlusCircle, FaServicestack } from "react-icons/fa";
 
 const Dashboard = () => {
     const { user, admin, userSignOut } = useAuth();
@@ -25,7 +25,7 @@ const Dashboard = () => {
 
                                         {
                                             user && <>
-                                                <Link to="/dashboard"><span className="me-3"><FaTh /></span>Dashboard Home</Link>
+
                                                 <Link to="my-orders"><span className="me-3"><FaListUl /></span>My Orders</Link>
 
                                                 <Link to="add-review"><span className="me-3"><FaComment /></span>Add Review</Link>
@@ -35,9 +35,9 @@ const Dashboard = () => {
                                         {
                                             admin && <>
                                                 <Link to="manage-packages"><span className="me-3"><FaServicestack /></span>Manage Packages</Link>
-                                                <Link to="manage-order"><span className="me-3"><FaServicestack /></span>Manage Order</Link>
+                                                <Link to="manage-orders"><span className="me-3"><FaServicestack /></span>Manage Order</Link>
                                                 <Link to="add-package"><span className="me-3"><FaPlusCircle /></span>Add Package</Link>
-                                                {/* <Link to="make-admin"><span className="me-3"><FaUserPlus /></span>Make Admin</Link> */}
+                                                <Link to="make-admin"><span className="me-3"><FaUserPlus /></span>Make Admin</Link>
                                             </>
                                         }
 
