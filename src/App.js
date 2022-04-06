@@ -10,6 +10,8 @@ import Packages from './pages/Packages/Packages';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Dashboard from './pages/Dashboard/Dashboard';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Booking from './pages/Booking/Booking';
 
 function App() {
   return (
@@ -28,8 +30,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            {/* <Route path="/courses/order/:id" element={<PrivateRoute>
-              <Order />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/packages/booking/:id" element={<PrivateRoute>
+              <Booking />
             </PrivateRoute>} />
 
             <Route path="*" element={<NotFound />} />
@@ -46,6 +49,7 @@ function App() {
             <Route path="/checkout" element={<PrivateRoute>
               <Checkout />
             </PrivateRoute>} /> */}
+
           </Routes>
         </Router>
       </AuthProvider>

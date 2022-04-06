@@ -28,25 +28,26 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ backgroundColor: '#dae2e273' }} />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavLink className="mx-2 text-decoration-none text-white fs-5" to="/home">Home</NavLink>
-                        <NavLink className="mx-2 text-decoration-none text-white fs-5" to="/packages">Packages</NavLink>
-                        <NavLink className="mx-2 text-decoration-none text-white fs-5" to="/about">About</NavLink>
-                        <NavLink className="mx-2 text-decoration-none text-white fs-5" to="/contact">Contact</NavLink>
+                        <NavLink className="mx-2 text-decoration-none text-white " to="/home">Home</NavLink>
+                        <NavLink className="mx-2 text-decoration-none text-white " to="/packages">Packages</NavLink>
+                        <NavLink className="mx-2 text-decoration-none text-white " to="/about">About</NavLink>
+                        <NavLink className="mx-2 text-decoration-none text-white " to="/contact">Contact</NavLink>
 
                     </Nav>
                     <Nav>
                         {
                             user?.email ? <>
                                 <small className="text-white mx-auto pe-3 pt-1">{user?.displayName}</small>
+                                <NavLink className="mx-2 text-decoration-none text-white " to="/dashboard">Dashboard</NavLink>
                                 <Button className="rounded-pill px-4 border-0" size="sm" variant="danger" onClick={handleSignOut}>
                                     <FaSignOutAlt className="me-2" />
                                     Log Out</Button>
                             </>
                                 :
                                 <>
-                                    <NavLink className="mx-2 text-decoration-none text-white fs-5" to="/register">Register</NavLink>
-                                    <NavLink className="mx-2 text-decoration-none text-white fs-5" to="/login">Login</NavLink>
-                                    <NavLink className="mx-2 text-decoration-none text-white fs-5" to="/dashboard">Dashboard</NavLink>
+                                    <NavLink className="mx-2 text-decoration-none text-white " to="/register">Register</NavLink>
+                                    <NavLink className="mx-2 text-decoration-none text-white " to="/login">Login</NavLink>
+
                                 </>
                         }
 

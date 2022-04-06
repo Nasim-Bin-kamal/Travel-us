@@ -1,9 +1,11 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import SingleCountryPackage from './SingleCountryPackage/SingleCountryPackage';
+import { Container, Spinner } from 'react-bootstrap';
+import SingleTourPackage from './SingleTourPackage/SingleTourPackage';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import useAuth from '../hooks/useAuth';
+import usePackages from '../hooks/usePackages';
 
 
 
@@ -47,23 +49,21 @@ const settings = {
 
 const CountryPackages = () => {
 
-    // const [reviews, setReviews] = useState([]);
-    // const { isLoading } = useAuth();
+    const [packages] = usePackages([]);
+    const { isLoading } = useAuth();
 
-    // useEffect(() => {
-    //     fetch('')
-    //         .then(res => res.json())
-    //         .then(data => setReviews(data));
-    // }, []);
-    // if (isLoading) {
-    //     return (
-    //         <div className="d-flex justify-content-center my-5 loading">
-    //             <Spinner className="" animation="grow" variant="danger" />
-    //             <Spinner className="" animation="grow" variant="warning" />
-    //             <Spinner className="" animation="grow" variant="success" />
-    //         </div>
-    //     )
-    // }
+    const deshiPackages = packages.filter(tourPackage => tourPackage.category === "Deshi")
+
+
+    if (isLoading) {
+        return (
+            <div className="d-flex justify-content-center my-5 loading">
+                <Spinner className="" animation="grow" variant="danger" />
+                <Spinner className="" animation="grow" variant="warning" />
+                <Spinner className="" animation="grow" variant="success" />
+            </div>
+        )
+    }
 
     return (
         <div className="packages-section py-5">
@@ -74,17 +74,9 @@ const CountryPackages = () => {
                 </div>
                 <div className="mx-3 my-5">
                     <Slider {...settings}>
-                        {/* <Row xs={1} md={2} lg={3}>
                         {
-                            packages?.map((singlePackage, p_id) => <SingleCountryPackage key={p_id} singlePackage={singlePackage} />)
+                            deshiPackages?.map((tourPackage) => <SingleTourPackage key={tourPackage?._id} tourPackage={tourPackage} />)
                         }
-                    </Row> */}
-                        <SingleCountryPackage />
-                        <SingleCountryPackage />
-                        <SingleCountryPackage />
-                        <SingleCountryPackage />
-                        <SingleCountryPackage />
-                        <SingleCountryPackage />
                     </Slider>
                 </div>
             </Container>

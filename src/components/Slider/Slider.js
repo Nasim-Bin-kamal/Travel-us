@@ -5,19 +5,24 @@ import './Slider.css';
 
 const sliderItems = [
     {
-        image: "https://i.ibb.co/xsJqP07/traveling-thailand-amazing-view-from-thai-traditional-wooden-longtail-boat-travel-sea-7186-3259.jpg",
+        image: "https://i.ibb.co/1qjxv4M/asset-11.png",
         caption: "Amazing Tour All Over The World",
         description: "Amazing Tour All Over The World"
     },
     {
-        image: "https://i.ibb.co/F7PvKM2/1293441583-nature-forest-morning-in-the-forest-015232.jpg",
+        image: "https://i.ibb.co/44q4grk/asset-19.png",
         caption: "Travel and Adventures",
         description: "Where would you like to go?"
     },
     {
-        image: "https://i.ibb.co/xSpr3jM/newyorkcity336475-1280.jpg",
+        image: "https://i.ibb.co/6RXTW7r/asset-13.jpg",
         caption: "Find Your Next Tours",
         description: "Plan your favourite destination"
+    },
+    {
+        image: "https://i.ibb.co/6YZf5r3/asset-12.jpg",
+        caption: "Fixed Your Desired Location",
+        description: "Fixed your location with your desired budget"
     }
 ];
 
