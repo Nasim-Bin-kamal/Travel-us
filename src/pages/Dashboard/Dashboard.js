@@ -25,8 +25,8 @@ const Dashboard = () => {
 
                                         {
                                             user && <>
-                                                <Link to="/dashboardHome"><span className="me-3"><FaTh /></span>Dashboard Home</Link>
-                                                <Link to="my-order"><span className="me-3"><FaListUl /></span>My Order</Link>
+                                                <Link to="/dashboard"><span className="me-3"><FaTh /></span>Dashboard Home</Link>
+                                                <Link to="my-orders"><span className="me-3"><FaListUl /></span>My Orders</Link>
 
                                                 <Link to="add-review"><span className="me-3"><FaComment /></span>Add Review</Link>
                                             </>
@@ -34,10 +34,10 @@ const Dashboard = () => {
 
                                         {
                                             admin && <>
-                                                <Link to="manage-product"><span className="me-3"><FaServicestack /></span>Manage Product</Link>
+                                                <Link to="manage-packages"><span className="me-3"><FaServicestack /></span>Manage Packages</Link>
                                                 <Link to="manage-order"><span className="me-3"><FaServicestack /></span>Manage Order</Link>
-                                                <Link to="add-product"><span className="me-3"><FaPlusCircle /></span>Add Product</Link>
-                                                <Link to="make-admin"><span className="me-3"><FaUserPlus /></span>Make Admin</Link>
+                                                <Link to="add-package"><span className="me-3"><FaPlusCircle /></span>Add Package</Link>
+                                                {/* <Link to="make-admin"><span className="me-3"><FaUserPlus /></span>Make Admin</Link> */}
                                             </>
                                         }
 

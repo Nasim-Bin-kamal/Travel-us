@@ -12,6 +12,10 @@ import Contact from './pages/Contact/Contact';
 import Dashboard from './pages/Dashboard/Dashboard';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Booking from './pages/Booking/Booking';
+import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
+import AddPackage from './pages/Dashboard/AddPackage/AddPackage';
+
+
 
 function App() {
   return (
@@ -36,17 +40,17 @@ function App() {
             </PrivateRoute>} />
 
             <Route path="*" element={<NotFound />} />
-            {/* <Route path="/dashboard/*" element={<PrivateRoute>
+            <Route path="/dashboard/*" element={<PrivateRoute>
               <Dashboard />
             </PrivateRoute>}>
-              <Route path="" element={<DashboardHome />} />
-              <Route path="manageOrders" element={<ManageOrders />} />
-              <Route path="addProducts" element={<AddProducts />} />
-              <Route path="manageProducts" element={<ManageProducts />} />
-              <Route path="myOrders" element={<MyOrders />} />
-              <Route path="addReview" element={<AddReview />} />
+              {/* <Route path="" element={<DashboardHome />} /> */}
+              {/* <Route path="manage-orders" element={<ManageOrders />} /> */}
+              <Route path="add-package" element={<AddPackage />} />
+              {/* <Route path="manage-products" element={<ManageProducts />} /> */}
+              <Route path="my-orders" element={<MyOrders />} />
+              {/* <Route path="addReview" element={<AddReview />} /> */}
             </Route>
-            <Route path="/checkout" element={<PrivateRoute>
+            {/* <Route path="/checkout" element={<PrivateRoute>
               <Checkout />
             </PrivateRoute>} /> */}
 

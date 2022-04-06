@@ -18,7 +18,7 @@ const SingleTourPackage = ({ tourPackage }) => {
                         <Card.Img className="img-fluid w-100 card-img" variant="top" src={image} />
                     </div>
                     <Card.Body>
-                        <div className="d-flex justify-content-between fs-5 text-secondary">
+                        <div className="d-flex justify-content-between  text-secondary">
                             <p><b className="text-dark">${packagePrice}</b>/per person</p>
                             <p><i className="far fa-calendar-alt"></i> {spendDays}</p>
                         </div>

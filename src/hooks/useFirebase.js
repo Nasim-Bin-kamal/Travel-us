@@ -166,7 +166,7 @@ const useFirebase = () => {
     //save user information in database
     const saveUserData = (email, displayName, method) => {
         const user = { email, displayName }; //if property name and value is same ,it can write in this way;
-        fetch('https://serene-fjord-11430.herokuapp.com/users', {
+        fetch('http://localhost:5000/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
