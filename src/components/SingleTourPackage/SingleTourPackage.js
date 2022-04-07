@@ -25,7 +25,7 @@ const SingleTourPackage = ({ tourPackage }) => {
                         <Card.Title className="fs-4 py-2"><i className="fas fa-map-marker-alt text-secondary"></i> <span className="title">{packageName}</span></Card.Title>
                         <div className="d-flex justify-content-between align-items-center">
                             <p><i className="fas fa-star pt-3"></i> <span className="text-secondary">{rating} {rating > 8.0 ? "Superb" : "Good"}</span></p>
-                            <Button onClick={() => handleBookingPackage(_id)} className="border-0  btn-book" variant="light"><i className="far fa-check-circle"></i> Book Now</Button>
+                            <Button onClick={() => handleBookingPackage(_id)} className="border-0  btn-book" variant="dark"><i className="far fa-check-circle"></i> Book Now</Button>
                         </div>
                     </Card.Body>
                 </Card>

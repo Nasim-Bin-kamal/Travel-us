@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Row, Button, InputGroup, FormControl } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Footer.css';
+import { FiSend } from "react-icons/fi";
 
 const Footer = () => {
     return (
@@ -9,7 +10,7 @@ const Footer = () => {
             <Container>
                 <Row xs={1} md={4} lg={4} className="py-5">
                     <Col >
-                        <h1>Travel Us</h1>
+                        <h1 className='text-white'>Travel Us</h1>
                         <p><small>Our main concern is to provide best packages with your budgets.</small></p>
                         <h4 className="text-white">Social Links</h4>
                         <div className="d-flex justify-content-start align-items-center my-3">
@@ -19,7 +20,7 @@ const Footer = () => {
                             <i className="social fab fa-youtube me-4"></i>
                         </div>
                     </Col>
-                    <Col className="mx-auto">
+                    <Col >
                         <h5 className="text-white">Quick Nav</h5>
                         <ul className="quickNav ps-0">
                             <li>
@@ -38,15 +39,17 @@ const Footer = () => {
                         </ul>
                     </Col>
                     <Col>
-                        <h5 className="text-white mb-3">Working Hours</h5>
+                        <h5 className="text-white mb-3">Contact Us</h5>
+                        <p>+8801789754636</p>
                         <p>Sat – Fri: 9.00 AM – 8.00 PM</p>
-                        <p>24 hours online service.</p>
 
                         <address>
                             <i>Lake Circus, Kolabagan</i><br />
                             <i>Dhanmondi, Dhaka-1215</i>
 
                         </address>
+                        <p>24 hours online service.</p>
+
                     </Col>
                     <Col >
                         <h5 className="text-white mb-3">Subscribe Us</h5>
@@ -58,8 +61,8 @@ const Footer = () => {
                                 aria-label="Enter your email"
                                 aria-describedby="basic-addon2"
                             />
-                            <Button variant="outline-warning" id="button-addon2">
-                                Subscribe
+                            <Button className='' variant="outline-warning" id="button-addon2">
+                                <FiSend className='fs-5 mx-2' />
                             </Button>
                         </InputGroup>
                         <p>Subscribe To Our Newsletter For Latest Update</p>

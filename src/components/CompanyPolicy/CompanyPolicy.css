@@ -1,0 +1,13 @@
+/* .status-section {
+    background-color: #ebe8e8b7;
+  } */
+  /* .short-info {
+    color: coral;
+  } */
+  .status {
+    background-color: rgba(235, 127, 11, 0.815);
+  }
+  .status:hover {
+    opacity: 0.8;
+  }
+  

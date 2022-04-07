@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Slider.css';
 
 
@@ -28,6 +29,8 @@ const sliderItems = [
 
 
 const Slider = () => {
+    const navigate = useNavigate();
+
     return (
         <div>
             <Carousel className="carousel">
@@ -42,7 +45,7 @@ const Slider = () => {
                             <Carousel.Caption className="caption">
                                 <h1>{item?.caption}</h1>
                                 <p className="fs-4">{item?.description}</p>
-                                <Button className="text-white border border-2 px-4 py-2 slider-btn" variant="outside-light">Read More <i className="fas fa-angle-double-right"></i></Button>
+                                <Button onClick={() => navigate("/packages")} className="text-white border border-2 rounded-pill px-4 py-2 slider-btn" variant="outside-light">Book A Tour <i className="fas fa-angle-double-right"></i></Button>
                             </Carousel.Caption>
                         </Carousel.Item>
                     ))

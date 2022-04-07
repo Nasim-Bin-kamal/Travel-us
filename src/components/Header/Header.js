@@ -5,7 +5,8 @@ import './Header.css';
 import { useLocation, useNavigate } from 'react-router';
 import { FaSignOutAlt } from "react-icons/fa";
 import useAuth from '../../hooks/useAuth';
-
+import { FaRegistered, FaSignInAlt } from "react-icons/fa";
+import { MdDashboard } from "react-icons/md";
 
 
 const Header = () => {
@@ -19,7 +20,7 @@ const Header = () => {
     }
     return (
 
-        <Navbar collapseOnSelect className="navbarBg" bg="" variant="light" sticky="top" expand="lg">
+        <Navbar collapseOnSelect className="navbarBg" bg="" variant="dark" sticky="top" expand="lg">
             <Container>
                 <Navbar.Brand className="nav-brand me-5">
                     <NavLink className="text-decoration-none text-white" to="/home">
@@ -42,14 +43,14 @@ const Header = () => {
                             {
                                 user?.email ? <>
                                     <small className="mx-2 py-1 d-block text-decoration-none">{user?.displayName}</small>
-                                    <NavLink className="mx-2 py-1 d-block text-decoration-none" to="/dashboard">Dashboard</NavLink>
+                                    <NavLink className="mx-2 py-1 d-block text-decoration-none text-black" to="/dashboard"><MdDashboard className='me-1 mb-1' />Dashboard</NavLink>
                                     <Button className="mx-2 my-2 rounded-pill border-2" size="sm" variant="outline-danger" onClick={handleSignOut}>
                                         <FaSignOutAlt className='me-1' />
                                         Log Out</Button>
                                 </> :
                                     <>
-                                        <NavLink className="mx-2 py-1 d-block text-decoration-none" to="/register">Register</NavLink>
-                                        <NavLink className="mx-2 py-1 d-block text-decoration-none" to="/login">Login</NavLink>
+                                        <NavLink className="mx-2 py-1 d-block text-decoration-none text-black" to="/register"><FaRegistered className='me-1 mb-1' />Register</NavLink>
+                                        <NavLink className="mx-2 py-1 d-block text-decoration-none text-black" to="/login"><FaSignInAlt className='me-1 mb-1' />Login</NavLink>
                                     </>
                             }
                         </NavDropdown>
