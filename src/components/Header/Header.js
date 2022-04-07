@@ -7,6 +7,7 @@ import { FaSignOutAlt } from "react-icons/fa";
 import useAuth from '../../hooks/useAuth';
 import { FaRegistered, FaSignInAlt } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
 
 
 const Header = () => {
@@ -30,19 +31,31 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ backgroundColor: '#dae2e273' }} />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavLink className="mx-2 text-decoration-none text-white " to="/home">Home</NavLink>
-                        <NavLink className="mx-2 text-decoration-none text-white " to="/packages">Packages</NavLink>
-                        <NavLink className="mx-2 text-decoration-none text-white " to="/about">About</NavLink>
-                        <NavLink className="mx-2 text-decoration-none text-white " to="/contact">Contact</NavLink>
+                        <NavLink className="mx-2 text-decoration-none text-white" to="/home">Home</NavLink>
+                        <NavLink className="mx-2 text-decoration-none text-white" to="/packages">Packages</NavLink>
+                        <NavLink className="mx-2 text-decoration-none text-white" to="/about">About</NavLink>
+                        <NavLink className="mx-2 text-decoration-none text-white" to="/contact">Contact</NavLink>
 
                     </Nav>
                     <Nav>
 
 
-                        <NavDropdown className="mx-2 text-decoration-none" title="Profile">
+                        <NavDropdown className="mx-2 text-decoration-none " title="Profile">
                             {
                                 user?.email ? <>
-                                    <small className="mx-2 py-1 d-block text-decoration-none">{user?.displayName}</small>
+                                    <div className='d-flex justify-content-lg-center'>
+
+                                        {
+                                            user?.photoURL ? (
+                                                <img className='mx-2 img-fluid  rounded-circle border border-2 w-25' src={user?.photoURL} alt="" />
+                                            ) : (
+                                                <CgProfile className='mx-2 fs-2' />
+                                            )
+                                        }
+
+                                    </div>
+                                    <small className="mx-2 py-1 d-block text-decoration-none text-lg-center">{user?.displayName}</small>
+
                                     <NavLink className="mx-2 py-1 d-block text-decoration-none text-black" to="/dashboard"><MdDashboard className='me-1 mb-1' />Dashboard</NavLink>
                                     <Button className="mx-2 my-2 rounded-pill border-2" size="sm" variant="outline-danger" onClick={handleSignOut}>
                                         <FaSignOutAlt className='me-1' />

@@ -6,11 +6,11 @@ import './CompanyPolicy.css';
 
 const CompanyPolicy = () => {
     return (
-        <div className="status-section">
+        <div className="pt-5 policy-section">
             <Container>
                 <div className="text-center mx-auto">
                     <h5 className="short-info">Our Policies</h5>
-                    <h2 className="text-secondary fw-bold">Why You Are Travel With Us</h2>
+                    <h2 className="text-white fw-bold">Why You Are Travel With Us</h2>
                 </div>
                 <div className="py-5 px-auto mx-auto">
                     <Row xs={1} md={2} lg={4}>

@@ -4,8 +4,17 @@
   /* .short-info {
     color: coral;
   } */
+  .policy-section{
+    background-image:linear-gradient(0deg, rgba(10, 10, 10, 0.651), rgba(10, 10, 10, 0.484)), url('https://i.ibb.co/hfvSxxS/asset-10.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom:10vh;
+    background-attachment: fixed;
+  }
   .status {
-    background-color: rgba(235, 127, 11, 0.815);
+    background-color: rgba(235, 104, 11, 0.815);
   }
   .status:hover {
     opacity: 0.8;

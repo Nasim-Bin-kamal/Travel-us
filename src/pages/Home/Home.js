@@ -14,8 +14,8 @@ const Home = () => {
             <Slider />
             <CountryPackages />
             <ForeignPackages />
-            <FaQuestions />
             <CompanyPolicy />
+            <FaQuestions />
             <Footer />
         </div>
     );
