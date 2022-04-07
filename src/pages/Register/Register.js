@@ -82,7 +82,7 @@ const Register = () => {
                     </div>
 
                     <div className="mb-3 d-flex align-items-center justify-content-center">
-                        <NavLink className="text-decoration-none" to='/login'>Alredy have an account? Please Login</NavLink>
+                        <NavLink className="text-decoration-none" to='/login'>Already have an account? Please Login</NavLink>
                     </div>
 
                 </div>

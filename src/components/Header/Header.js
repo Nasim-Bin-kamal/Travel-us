@@ -23,7 +23,7 @@ const Header = () => {
         <Navbar collapseOnSelect className="navbarBg" bg="" variant="dark" sticky="top" expand="lg">
             <Container>
                 <Navbar.Brand className="nav-brand me-5">
-                    <NavLink className="text-decoration-none text-white" to="/home">
+                    <NavLink className="text-decoration-none text-white" to="/">
                         <h1>Travel Us</h1>
                     </NavLink>
                 </Navbar.Brand>

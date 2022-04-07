@@ -6,6 +6,7 @@ import styles from './Dashboard.module.css';
 import { FaHome, FaComment, FaListUl, FaUserPlus, FaSignOutAlt, FaPlusCircle, FaServicestack } from "react-icons/fa";
 
 const Dashboard = () => {
+
     const { user, admin, userSignOut } = useAuth();
 
 
@@ -18,8 +19,10 @@ const Dashboard = () => {
                             <div className="bg-light rounded-3 pt-2 pb-4 border" style={{ minHeight: '80vh', position: 'sticky', top: '114px' }}>
                                 <Nav variant="light" className={`${'flex-column'} ${styles.dashNav}`}>
                                     <>
-                                        <div>
-                                            <h2 className='text-center fw-bold'>Dashboard</h2>
+                                        <div className='mb-3 text-center fw-bold'>
+                                            <h2 >Dashboard</h2>
+                                            <h5 className='text-success'>Hello, {user?.displayName}</h5>
+
                                         </div>
                                         <Link to="/home"><span className="me-3"><FaHome /></span>Home</Link>
 
@@ -28,16 +31,16 @@ const Dashboard = () => {
 
                                                 <Link to="my-orders"><span className="me-3"><FaListUl /></span>My Orders</Link>
 
-                                                <Link to="add-review"><span className="me-3"><FaComment /></span>Add Review</Link>
+                                                {/* <Link to="add-review"><span className="me-3"><FaComment /></span>Add Review</Link> */}
                                             </>
                                         }
 
                                         {
-                                            admin && <>
-                                                <Link to="manage-packages"><span className="me-3"><FaServicestack /></span>Manage Packages</Link>
-                                                <Link to="manage-orders"><span className="me-3"><FaServicestack /></span>Manage Order</Link>
+                                            user && <>
+                                                {/* <Link to="manage-packages"><span className="me-3"><FaServicestack /></span>Manage Packages</Link> */}
+                                                <Link to="manage-orders"><span className="me-3"><FaServicestack /></span>Manage Orders</Link>
                                                 <Link to="add-package"><span className="me-3"><FaPlusCircle /></span>Add Package</Link>
-                                                <Link to="make-admin"><span className="me-3"><FaUserPlus /></span>Make Admin</Link>
+                                                {/* <Link to="make-admin"><span className="me-3"><FaUserPlus /></span>Make Admin</Link> */}
                                             </>
                                         }
 
