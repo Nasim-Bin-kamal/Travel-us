@@ -12,15 +12,25 @@ import Contact from './pages/Contact/Contact';
 import Dashboard from './pages/Dashboard/Dashboard';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Booking from './pages/Booking/Booking';
-import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
 import AddPackage from './pages/Dashboard/AddPackage/AddPackage';
 import DashboardHome from './pages/Dashboard/DashboardHome/DashboardHome';
-import ManageOrders from './pages/Dashboard/ManageOrders/ManageOrders';
-
-
+import MyPackages from './pages/Dashboard/MyPackages/MyPackages';
+import ManagePackages from './pages/Dashboard/ManagePackages/ManagePackages';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000
+    });
+  }, []);
+
+
+
   return (
     <div className="">
       <AuthProvider>
@@ -49,8 +59,8 @@ function App() {
               <Route path="" element={<DashboardHome />} />
               {/* <Route path="manage-orders" element={<ManageOrders />} /> */}
               <Route path="add-package" element={<AddPackage />} />
-              <Route path="manage-orders" element={<ManageOrders />} />
-              <Route path="my-orders" element={<MyOrders />} />
+              <Route path="manage-packages" element={<ManagePackages />} />
+              <Route path="my-packages" element={<MyPackages />} />
               {/* <Route path="addReview" element={<AddReview />} /> */}
             </Route>
             {/* <Route path="/checkout" element={<PrivateRoute>

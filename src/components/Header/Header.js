@@ -54,7 +54,7 @@ const Header = () => {
                                         }
 
                                     </div>
-                                    <small className="mx-2 py-1 d-block text-decoration-none text-lg-center">{user?.displayName}</small>
+                                    <small className="mx-2 py-1 d-block text-decoration-none text-lg-center fw-bold">{user?.displayName}</small>
 
                                     <NavLink className="mx-2 py-1 d-block text-decoration-none text-black" to="/dashboard"><MdDashboard className='me-1 mb-1' />Dashboard</NavLink>
                                     <Button className="mx-2 my-2 rounded-pill border-2" size="sm" variant="outline-danger" onClick={handleSignOut}>

@@ -22,7 +22,7 @@ const AddPackage = () => {
         <div>
             <Container>
                 <div className="text-center mx-auto my-2">
-                    <h2 className="form-title">Add A Tour Package</h2>
+                    <h2 className="form-title">Add Tour Package</h2>
                     <h5 className="text-secondary">To add a package fill the require form fields</h5>
                 </div>
                 <div className="package-from mx-auto my-5 p-3 rounded-3 shadow-sm">

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Accordion, Col, Container, Row } from 'react-bootstrap';
+import AOS from 'aos';
 
 const faqs = [
     {
@@ -40,6 +41,13 @@ const faqs = [
 ];
 
 const FaQuestions = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        });
+    }, []);
+
+
     return (
         <div>
             <Container>
@@ -47,10 +55,10 @@ const FaQuestions = () => {
                     <h2 className='mx-auto py-3 text-center text-secondary fw-bold'>Some FAQs</h2>
                 </div>
                 <Row xs={1} md={2} lg={2} className='mx-auto my-5 '>
-                    <Col className='py-2'>
+                    <Col className='py-2' data-aos="fade-right">
                         <img className='img-fluid' src="https://i.ibb.co/KspJbhv/19333426.jpg" alt="" />
                     </Col>
-                    <Col className='py-2'>
+                    <Col className='py-2' data-aos="fade-left">
                         <Accordion className='accordion'>
                             {
                                 faqs?.map((faq, f_id) => (

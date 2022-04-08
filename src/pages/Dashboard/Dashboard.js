@@ -29,7 +29,7 @@ const Dashboard = () => {
                                         {
                                             user && <>
 
-                                                <Link to="my-orders"><span className="me-3"><FaListUl /></span>My Orders</Link>
+                                                <Link to="my-packages"><span className="me-3"><FaListUl /></span>My Packages</Link>
 
                                                 {/* <Link to="add-review"><span className="me-3"><FaComment /></span>Add Review</Link> */}
                                             </>
@@ -38,7 +38,7 @@ const Dashboard = () => {
                                         {
                                             user && <>
                                                 {/* <Link to="manage-packages"><span className="me-3"><FaServicestack /></span>Manage Packages</Link> */}
-                                                <Link to="manage-orders"><span className="me-3"><FaServicestack /></span>Manage Orders</Link>
+                                                <Link to="manage-packages"><span className="me-3"><FaServicestack /></span>Manage Packages</Link>
                                                 <Link to="add-package"><span className="me-3"><FaPlusCircle /></span>Add Package</Link>
                                                 {/* <Link to="make-admin"><span className="me-3"><FaUserPlus /></span>Make Admin</Link> */}
                                             </>

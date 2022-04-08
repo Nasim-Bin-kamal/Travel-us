@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import './About.css';
+import AOS from 'aos';
 
 const About = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        });
+    }, []);
     return (
         <div>
             <Header />
@@ -18,7 +24,7 @@ const About = () => {
                             <h2 className="text-center mx-auto text-uppercase py-5 fw-bold title">Board Of Directors</h2>
                         </div>
                         <Row xs={1} md={2} lg={3} className="pb-5 mx-auto">
-                            <Col className="mx-auto my-3">
+                            <Col className="mx-auto my-3" data-aos="fade-right">
                                 <div className="mx-auto shadow-sm p-3 bg-white  rounded-3">
                                     <img className="img-fluid w-100 mx-auto pb-3" src="https://i.ibb.co/3dnRtNV/team-1-1.jpg" alt="" />
                                     <p>CEO</p>
@@ -26,7 +32,7 @@ const About = () => {
                                     <small>The chief executive officer (CEO) is the highest-ranking person in a company. While every company differs, CEOs are often responsible for expanding the company, driving profitability, and in the case of public companies, improving share prices. CEOs manage the overall operations of a company.</small>
                                 </div>
                             </Col>
-                            <Col className="mx-auto my-3">
+                            <Col className="mx-auto my-3" data-aos="zoom-in">
                                 <div className="mx-auto shadow-sm p-3 bg-white  rounded-3">
                                     <img className="img-fluid w-100 mx-auto pb-3" src="https://i.ibb.co/0jCBbpj/team-1-4.jpg" alt="" />
                                     <p>MD</p>
@@ -34,7 +40,7 @@ const About = () => {
                                     <small> Managing Director is the leader of our company. He is a person who develops a corporate culture for our company. Since the MD is responsible for the day-to-day business of on organisation, he would be responsible for the overall management of our company. He is a person who has to bring in innovations and expansions.</small>
                                 </div>
                             </Col>
-                            <Col className="mx-auto my-3">
+                            <Col className="mx-auto my-3" data-aos="fade-left">
                                 <div className="mx-auto shadow-sm p-3 bg-white  rounded-3">
                                     <img className="img-fluid w-100 mx-auto pb-3" src="https://i.ibb.co/FXSB4Ss/team-1-3.jpg" alt="" />
                                     <p>CAO</p>

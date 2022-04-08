@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
-import './ManageOrders.css';
+import './ManagePackages.css';
 
-const ManageOrders = () => {
+const ManagePackages = () => {
     const [bookedPackages, setBookedPackages] = useState([]);
     const [modifiedCount, setModifiedCount] = useState(0);
 
@@ -90,4 +90,4 @@ const ManageOrders = () => {
     );
 };
 
-export default ManageOrders;
+export default ManagePackages;

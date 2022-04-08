@@ -2,13 +2,14 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
-import './MyOrders.css';
+import './MyPackages.css';
 
-const MyOrders = () => {
+const MyPackages = () => {
     const { user } = useAuth();
     const [bookedPackages, setBookedPackages] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/bookings?email=${user?.email}`)
+        const url = `http://localhost:5000/bookings?email=${user?.email}`;
+        fetch(url)
             .then(res => res.json())
             .then(data => setBookedPackages(data));
 
@@ -67,4 +68,4 @@ const MyOrders = () => {
     );
 };
 
-export default MyOrders;
+export default MyPackages;
