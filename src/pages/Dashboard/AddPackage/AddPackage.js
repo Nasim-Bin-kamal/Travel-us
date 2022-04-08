@@ -32,7 +32,7 @@ const AddPackage = () => {
                         <input className="w-100  mx-auto my-2 p-1 border border-2 rounded-3" type="text" placeholder="Spend Days, i.e. (3 Days/ 4 Night)" {...register("spendDays", { required: true })} />
                         <input className="w-100  mx-auto my-2 p-1 border border-2 rounded-3" type="text" placeholder="Image Url" {...register("image", { required: true })} />
                         <input className="w-100  mx-auto my-2 p-1 border border-2 rounded-3" type="text" placeholder="Rating" {...register("rating", { required: true })} />
-                        <input className="w-100  mx-auto my-2 p-1 border border-2 rounded-3" type="text" placeholder="Category,i.e. (Deshi/Foreign)" {...register("rating", { required: true })} />
+                        <input className="w-100  mx-auto my-2 p-1 border border-2 rounded-3" type="text" placeholder="Category,i.e. (Deshi/Foreign)" {...register("category", { required: true })} />
                         <textarea className="w-100  mx-auto my-2 p-1 border border-2 rounded-3" placeholder="Package Description" {...register("description", { required: true })} />
 
                         <Button className="btn-submit border-0 fw-bold px-3 w-50 mt-3" variant="success" type="submit">Submit</Button>
